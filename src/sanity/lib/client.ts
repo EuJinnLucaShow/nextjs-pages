@@ -15,5 +15,6 @@ export function getClient(previewToken?: string): SanityClient {
       studioUrl: "/studio",
     },
     token: previewToken,
+    ignoreBrowserTokenWarning: true,
   });
 }
