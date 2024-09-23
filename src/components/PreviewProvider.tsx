@@ -1,5 +1,3 @@
-// ./src/components/PreviewProvider.tsx
-
 import { LiveQueryProvider } from "next-sanity/preview";
 import { useMemo } from "react";
 

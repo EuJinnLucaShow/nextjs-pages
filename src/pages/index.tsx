@@ -1,5 +1,3 @@
-"use client";
-
 import { SanityDocument } from "next-sanity";
 import dynamic from "next/dynamic";
 

@@ -1,5 +1,3 @@
-// ./src/pages/api/draft.ts
-
 import { validatePreviewUrl } from "@sanity/preview-url-secret";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "next-sanity";
@@ -34,8 +32,8 @@ export default async function handle(
   if (!isValid) {
     return res.status(401).send("Invalid secret");
   }
-  // Enable Draft Mode by setting the cookies
-  res.setDraftMode({ enable: true });
+
+  res.setDraftMode({ enable: false });
   res.writeHead(307, { Location: redirectTo });
   res.end();
 }
