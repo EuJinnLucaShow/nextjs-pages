@@ -1,5 +1,3 @@
-// ./src/components/PostPreview.tsx
-
 import { QueryParams, SanityDocument } from "next-sanity";
 import { useLiveQuery } from "next-sanity/preview";
 

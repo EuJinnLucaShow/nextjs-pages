@@ -17,6 +17,10 @@ type PageProps = {
 };
 
 export default function SinglePost(props: PageProps) {
+  if (!props.post) {
+    return <div>Loading...</div>;
+  }
+
   return props.draftMode ? (
     <PostPreview post={props.post} params={props.params} />
   ) : (

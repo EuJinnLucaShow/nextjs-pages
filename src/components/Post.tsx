@@ -8,6 +8,7 @@ import { dataset, projectId } from "../sanity/env";
 const builder = imageUrlBuilder({ projectId, dataset });
 
 export default function Post({ post }: { post: SanityDocument }) {
+  if (!post) return null;
   const { title, mainImage, body } = post;
 
   return (
