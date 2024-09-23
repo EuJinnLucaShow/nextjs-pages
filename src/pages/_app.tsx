@@ -1,5 +1,3 @@
-// ./src/pages/_app.tsx
-
 import "@/styles/globals.css";
 import { VisualEditing } from "@sanity/visual-editing/next-pages-router";
 

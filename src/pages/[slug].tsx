@@ -1,5 +1,3 @@
-// ./src/pages/[slug].tsx
-
 import { QueryParams, SanityDocument } from "next-sanity";
 import dynamic from "next/dynamic";
 import { GetStaticPaths } from "next";
@@ -40,7 +38,6 @@ export const getStaticProps = async ({ params = {}, draftMode = false }) => {
   };
 };
 
-// Prepare Next.js to know which routes already exist
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = await getClient().fetch(POSTS_SLUG_QUERY);
 
