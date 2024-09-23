@@ -1,5 +1,3 @@
-// ./src/pages/index.tsx
-
 import { SanityDocument } from "next-sanity";
 import dynamic from "next/dynamic";
 
@@ -27,7 +25,7 @@ export default function Home(props: PageProps) {
 export const getStaticProps = async ({ draftMode = false }) => {
   const client = getClient(draftMode ? token : undefined);
   const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY);
-
+  console.log(posts);
   return {
     props: {
       posts,
