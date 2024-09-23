@@ -33,7 +33,7 @@ export default async function handle(
     return res.status(401).send("Invalid secret");
   }
 
-  res.setDraftMode({ enable: false });
+  res.setDraftMode({ enable: true });
   res.writeHead(307, { Location: redirectTo });
   res.end("Draft mode is enabled");
 }
